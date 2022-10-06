@@ -1,47 +1,40 @@
 package com.entities;
 
 public class Load {
-    private int height;
-    private int width;
-    private int length;
+    private double height;
+    private double width;
     private double weight;
 
-    public Load(int height, int width, int length, double weight) {
+    public Load(double height, double width, double wight) {
         this.height = height;
         this.width = width;
-        this.length = length;
-        this.weight = weight;
+        this.weight = wight;
+    }
+    public Load(){
+
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
     }
 
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWight(double weight) {
         this.weight = weight;
     }
 
@@ -50,10 +43,7 @@ public class Load {
         return "Load{" +
                 "height=" + height +
                 ", width=" + width +
-                ", length=" + length +
                 ", weight=" + weight +
                 '}';
     }
-
-
 }

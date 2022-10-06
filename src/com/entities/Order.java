@@ -1,20 +1,15 @@
 package com.entities;
 
 public class Order {
-    private int orderFree;
     private Load load;
-
-    public Order(int orderFree, Load load) {
-        this.orderFree = orderFree;
+    private double orderFee ;
+    public Order(Load load) {
         this.load = load;
+        this.orderFee = load.getWeight()*DeliveryCompany.pricePerKilogram;
     }
 
-    public int getOrderFree() {
-        return orderFree;
-    }
-
-    public void setOrderFree(int orderFree) {
-        this.orderFree = orderFree;
+    public double getOrderFee() {
+        return orderFee;
     }
 
     public Load getLoad() {
@@ -23,13 +18,5 @@ public class Order {
 
     public void setLoad(Load load) {
         this.load = load;
-    }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "orderFree=" + orderFree +
-                ", load=" + load +
-                '}';
     }
 }

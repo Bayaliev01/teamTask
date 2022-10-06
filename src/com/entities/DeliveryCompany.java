@@ -1,17 +1,22 @@
 package com.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DeliveryCompany {
-    private String deliveryCompanyName;
-    public final static  double PRICE_PER_KILLOGRAM  = 12.0;
-    private List<Customer> customers;
-    public final static  double MAX_CAPACITY_PER_CUBE_SENTYMETR = 10.0;
+    public static final double pricePerKilogram = 15.0;
 
-    public DeliveryCompany(String deliveryCompanyName, List<Customer> customers) {
-        this.deliveryCompanyName = deliveryCompanyName;
-        this.customers = customers;
+    public double getPricePerKilogram() {
+        return pricePerKilogram;
     }
+
+    public double getMaxCapacityPerSquareMeter() {
+        return maxCapacityPerSquareMeter;
+    }
+
+    private final double maxCapacityPerSquareMeter = 20.0;
+    private String deliveryCompanyName;
+    List<Customer>customers = new ArrayList<>();
 
     public String getDeliveryCompanyName() {
         return deliveryCompanyName;
@@ -29,11 +34,8 @@ public class DeliveryCompany {
         this.customers = customers;
     }
 
-    @Override
-    public String toString() {
-        return "DeliveryCompany{" +
-                "deliveryCompanyName='" + deliveryCompanyName + '\'' +
-                ", customers=" + customers +
-                '}';
+    public DeliveryCompany(String deliveryCompanyName) {
+        this.deliveryCompanyName = deliveryCompanyName;
     }
+
 }
