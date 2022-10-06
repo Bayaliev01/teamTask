@@ -1,12 +1,14 @@
 package com.entities;
 
+import java.util.List;
+
 public class Customer {
     private String customerName;
-    private Order order;
+    private List<Order> orders;
 
-    public Customer(String customerName, Order order) {
+    public Customer(String customerName, List<Order> orders) {
         this.customerName = customerName;
-        this.order = order;
+        this.orders = orders;
     }
 
     public String getCustomerName() {
@@ -17,19 +19,19 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public Order getOrder() {
-        return order;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
                 "customerName='" + customerName + '\'' +
-                ", order=" + order +
+                ", orders=" + orders +
                 '}';
     }
 }
