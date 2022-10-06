@@ -1,4 +1,4 @@
-package com.entities;
+package entities;
 
 public class Order {
     private int orderFree;
@@ -25,11 +25,7 @@ public class Order {
         this.load = load;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "orderFree=" + orderFree +
-                ", load=" + load +
-                '}';
+    public int getOrderFee() {
+        return orderFree;
     }
 }
